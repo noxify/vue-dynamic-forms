@@ -1,21 +1,16 @@
-import { shallowMount } from '@vue/test-utils';
 import DynamicInput from './DynamicInput.vue';
 import { FormControl } from '@/core/utils';
+import { selectWithProps } from 'tests/helpers';
 
 describe('DynamicInput', () => {
-  let cmp;
-
-  beforeEach(() => {
-    cmp = shallowMount(DynamicInput);
-    cmp.setProps({
+  it('is a Vue instance', () => {
+    const Input = selectWithProps(DynamicInput, {
       formControl: new FormControl({
         type: 'textarea',
         label: 'Bio',
         name: 'bio',
       }),
     });
-  });
-  it('is a Vue instance', () => {
-    expect(cmp.isVueInstance()).toBeTruthy();
+    expect(Input.isVueInstance()).toBeTruthy();
   });
 });

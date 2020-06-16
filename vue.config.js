@@ -22,5 +22,6 @@ module.exports = {
     config.merge({ devtool: 'source-map' });
     config.resolve.symlinks(false);
     config.resolve.alias.set('@', path.resolve(__dirname, 'src'));
+    config.resolve.alias.set('tests', path.resolve(__dirname, 'tests'));
   },
 };
