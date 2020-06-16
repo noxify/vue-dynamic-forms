@@ -167,6 +167,7 @@ const data = () => ({
         type: 'number',
         label: 'Number 2',
         name: 'number2',
+        disabled: true,
         value: 50,
         customClass: 'col-12 col-md-6',
       }),
