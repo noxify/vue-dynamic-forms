@@ -4,10 +4,13 @@
     v-model="formControl.value"
     :name="formControl.name"
     class="form-control"
+    @change="valueChange()"
+    @focus="onFocus()"
+    @blur="onBlur()"
   >
     <option
       v-for="opt in formControl.options"
-      :key="opt.text"
+      :key="opt.value"
       :value="opt.value"
       :disabled="opt.disabled"
     >
